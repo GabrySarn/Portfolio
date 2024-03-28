@@ -1,0 +1,61 @@
+.container {
+    height: 200vh; /* Altezza sufficiente per consentire lo scrolling */
+    overflow: hidden; /* Assicura che le immagini non siano visibili al di fuori del contenitore */
+  }
+  
+  .boxx {
+    opacity: 0; /* Opacità iniziale */
+    transition: opacity 0.5s ease-in-out; /* Effetto di transizione */
+  }
+  
+  /* Aggiunge l'opacità solo quando l'elemento ha la classe 'visible' */
+  .boxx.visible {
+    opacity: 1;
+    
+  }
+  
+  /* Animazioni */
+  .boxx[data-animation="slideInFromLeft"] {
+    margin-left: -100%; /* Sposta l'elemento fuori dallo schermo a sinistra */
+    animation: slideInFromLeft 1s forwards;
+  }
+  
+  @keyframes slideInFromLeft {
+    to {
+      margin-left: 0; /* Sposta l'elemento dentro il contenitore */
+    }
+  }
+  
+  .boxx[data-animation="slideInFromRight"] {
+    margin-left: 100%; /* Sposta l'elemento fuori dallo schermo a destra */
+    animation: slideInFromRight 1s forwards;
+  }
+  
+  @keyframes slideInFromRight {
+    to {
+      margin-left: 0; /* Sposta l'elemento dentro il contenitore */
+    }
+  }
+  
+  .boxx[data-animation="slideInFromTop"] {
+    margin-top: -100%; /* Sposta l'elemento fuori dallo schermo sopra */
+    animation: slideInFromTop 1s forwards;
+  }
+  
+  @keyframes slideInFromTop {
+    to {
+      margin-top: 0; /* Sposta l'elemento dentro il contenitore */
+    }
+  }
+  
+  .boxx[data-animation="slideInFromBottom"] {
+    margin-top: 100%; /* Sposta l'elemento fuori dallo schermo sotto */
+    animation: slideInFromBottom 1s forwards;
+  }
+  
+  @keyframes slideInFromBottom {
+    to {
+      margin-top: 0; /* Sposta l'elemento dentro il contenitore */
+    }
+  }
+  
